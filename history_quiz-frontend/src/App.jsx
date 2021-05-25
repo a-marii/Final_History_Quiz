@@ -192,7 +192,7 @@ export class App extends React.Component {
   renderArrayTopics = () => {
     return this.state.list_of_topics.map(({ id, topic}) =>
      <ul className = "Topics">
-       <input type="checkbox"  id={id}  onClick={() => this.assistant_param(id, "choose_theme")} classname='input_top'></input>
+       <input type="checkbox"  id={id}  onClick={() => this.assistant_param(id, "choose_theme")} className='input_top'></input>
        <label for = {id}>{id} {topic}</label>
     </ul>);
   }
@@ -237,6 +237,18 @@ export class App extends React.Component {
         action_id: a
       }
     })
+    if(a === "show_res"){
+      this.ShowResults();
+    }
+    else if(a === "del_res"){
+      this.DeleteResults();
+    }
+    else if(a === "list_theme"){
+      this.ShowTopics();
+    }
+    else {
+      this.NewQuestion();
+    }
   }
 
   assistant_param(n, state)  {
