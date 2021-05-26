@@ -34,7 +34,7 @@ export class App extends React.Component {
       list_of_topics:[],
       show_results: [],
       topic:{id:'', topic: '', start:0, finish:0},
-      state:0,
+      state:4,
       rand: 0,
 
     }    
@@ -60,6 +60,7 @@ export class App extends React.Component {
      this.setState({ questions: quest});
      console.log('questions',this.state.questions)   
       this.allTopics ()
+      this.setState({state:0 });
     })
   }
 
@@ -276,7 +277,7 @@ export class App extends React.Component {
         <div className='Text'>
         </div >
       </div>
-      <p><button onClick={() =>/* this.WriteResults()*/ this.assistant_global_event("show_res")} className ="fourth_button">Результаты</button></p>
+      <ul className="positionButtons"> <p><button onClick={() =>/* this.WriteResults()*/ this.assistant_global_event("show_res")} className ="fourth_button">Результаты</button></p></ul>
     </div>)
   }
   ShowTopics() {
@@ -296,7 +297,7 @@ export class App extends React.Component {
   WriteQuestions(){
     return(    
     <div className="App">
-      <div className="Answers">
+ <div className="Answers">
         <div className="Questions"> {this.state.questions[this.state.rand].task}</div>
         <p><button onClick={() => this.assistant_param(1, "answer")} className = "but_res">Вариант 1: {this.state.questions[this.state.rand].answer1}</button></p>
         <p><button onClick={() => this.assistant_param(2, "answer")} className = "but_res">Вариант 2: {this.state.questions[this.state.rand].answer2}</button></p>
@@ -307,9 +308,10 @@ export class App extends React.Component {
           <ul> Результат: {this.state.result} </ul> 
         </div>
       </div>
-      <p><button onClick={() => this.assistant_global_event("list_theme")} className ="second_button"><span>Список тем</span></button></p>
+
+     <ul className="positionButtons"> <p><button onClick={() => this.assistant_global_event("list_theme")} className ="second_button"><span>Список тем</span></button></p>
       <p><button onClick={() => this.assistant_global_event("next_answer")} className ="third_button"><span>Следующий вопрос</span></button></p>
-      <p><button onClick={() => this.assistant_global_event("show_res")} className ="fourth_button">Результаты</button></p>
+      <p><button onClick={() => this.assistant_global_event("show_res")} className ="fourth_button">Результаты</button></p></ul>
     </div>)
   }
   
@@ -320,14 +322,14 @@ export class App extends React.Component {
         <table /*border="1"  width="30%" height="50%" cellpadding="0" cellspacing="0"*/>
           <thead>
             <tr>
-                <th colspan="5">Результаты</th>
+                <th className="text_rez" colspan="5">Результаты</th>
             </tr>
             <tr>
-              <th>Тема</th>
-              <th>Задание</th>
-              <th>Ваш ответ</th>
-              <th>Верный ответ</th>
-              <th>Вердикт</th>
+              <th className="text_rez">Тема</th>
+              <th className="text_rez">Задание</th>
+              <th className="text_rez">Ваш ответ</th>
+              <th className="text_rez">Верный ответ</th>
+              <th className="text_rez">Вердикт</th>
             </tr>
           </thead>
           <tbody>
@@ -340,11 +342,16 @@ export class App extends React.Component {
         <div className='Text'>
         </div>
       </div>
-      <p><button onClick={() => this.assistant_global_event("list_theme")} className ="third_button"><span>Список тем</span></button></p>
-      <p><button onClick={() => this.assistant_global_event("del_res")} className ="fourth_button">Сброс результатов</button></p>
+      <ul className="positionButtons"><p><button onClick={() => this.assistant_global_event("list_theme")} className ="third_button"><span>Список тем</span></button></p>
+      <p><button onClick={() => this.assistant_global_event("del_res")} className ="fourth_button">Сброс результатов</button></p></ul>
     </div>)
   }
-
+  WriteLoading(){
+    return(
+      <div className="App"><div className="position"><div className="loader" role="status">
+</div>       </div></div>
+    )
+  }
   render() {
     console.log('render');
     switch(this.state.state){
@@ -354,8 +361,14 @@ export class App extends React.Component {
         return this.WriteQuestions();
       case 2:
         return this.WriteResults();
+      case 4:
+          return this.WriteLoading();
+          
+
+        
       default:
         break;
-    }
+    
+  }
   }
 }
