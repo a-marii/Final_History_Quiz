@@ -211,6 +211,7 @@ table {
  border-radius: 30px;
  font-family: 'Montserrat', sans-serif;
  font-weight: lighter;
+ cursor:pointer
  
 }
 .Answers{
@@ -238,6 +239,7 @@ table {
   text-align: center;
   transition: all 0.5s;
   font-weight: lighter;
+  cursor:pointer
 }
 
 .Topics{
@@ -249,16 +251,16 @@ table {
   line-height: 250%;
   border-radius: 45px;
   margin: 0.5%;
-  font-size: 190%;
+  font-size: 170%;
   text-align: center;
   background: white;
   box-shadow: 0 8px 15px rgba(0, 0, 0, .5);
   transition: .3s;
   font-weight: lighter;
   padding:1.5%;
-  text-align:center; vertical-align:middle;
   font-family: 'Montserrat', sans-serif;
-  
+  border: none;
+
 }
 
 
@@ -302,14 +304,7 @@ table {
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-.container4 {
-  top:10%;
-  width: 1000px;
-position: absolute;
-left: 50%;
-margin-left: -500px;
 
- }
 
 .Results{
   font-family: 'Montserrat', sans-serif;
@@ -461,7 +456,7 @@ button:hover {
 
 .positionButtons{
   bottom: 15%;
-  right: 5%;
+  right: 2.5%;
   position: fixed;
 }
 .color{

@@ -191,10 +191,14 @@ export class App extends React.Component {
   }
 
   renderArrayTopics = () => {
-    return this.state.list_of_topics.map(({ id, topic}) =>
-     <ul className = "Topics">
-       <input type="checkbox"  id={id}  onClick={() => this.assistant_param(id, "choose_theme")} className='input_top'></input>
-       <label for = {id}>{id} {topic}</label>
+    return( 
+     <ul  >
+   
+       <button  className = "Topics" onClick={() => this.assistant_param(this.state.list_of_topics[0].id, "choose_theme")}>{this.state.list_of_topics[0].id}. {this.state.list_of_topics[0].topic}</button>
+       <button  className = "Topics" onClick={() => this.assistant_param(this.state.list_of_topics[1].id, "choose_theme")}>{this.state.list_of_topics[1].id}. {this.state.list_of_topics[1].topic}</button>
+       <button  className = "Topics" onClick={() => this.assistant_param(this.state.list_of_topics[2].id, "choose_theme")}>{this.state.list_of_topics[2].id}. {this.state.list_of_topics[2].topic}</button>
+       <button  className = "Topics" onClick={() => this.assistant_param(this.state.list_of_topics[3].id, "choose_theme")}>{this.state.list_of_topics[3].id}. {this.state.list_of_topics[3].topic}</button>
+
     </ul>);
   }
 
