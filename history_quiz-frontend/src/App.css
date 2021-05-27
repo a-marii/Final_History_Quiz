@@ -66,7 +66,6 @@
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   transition: all 0.5s;
-  cursor: pointer;
   margin: 5px;
   font-weight: lighter;
   
@@ -211,7 +210,6 @@ table {
  border-radius: 30px;
  font-family: 'Montserrat', sans-serif;
  font-weight: lighter;
- cursor:pointer
  
 }
 .Answers{
