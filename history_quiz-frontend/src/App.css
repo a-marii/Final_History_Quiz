@@ -212,7 +212,7 @@ table {
  font-weight: bolder;
  
 }
-.Questions:focus{
+.Questions:focus-visible{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -233,7 +233,7 @@ table {
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
 }
-.Answers:focus{
+.Answers:focus-visible{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -256,7 +256,7 @@ table {
   font-weight: bolder;
   cursor:pointer
 }
-.but_res:focus{
+.but_res:focus-visible{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -304,7 +304,7 @@ table {
 .input_top{
   opacity: 0;
 }
-.Topics:focus{
+.Topics:focus-visible{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -417,7 +417,7 @@ button:focus-visible {
   margin: 5px;
 
 }
-.second_button:focus{
+.second_button:focus-visible{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -470,7 +470,7 @@ button:focus-visible {
     border-radius: 45px;
     outline:0 none !important;
 }
-.third_button:focus{
+.third_button:focus-visible{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -514,7 +514,7 @@ button:focus-visible {
   border-radius: 45px;
   outline:0 none !important;
 }
-.fourth_button:focus{
+.fourth_button:focus-visible{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
