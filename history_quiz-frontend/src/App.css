@@ -327,7 +327,16 @@ table {
   font-weight: bolder;
 }
 
+.Topics:focus-visible{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+    cursor:pointer
 
+}
 .Result{
   left: 43%;
   font-family: 'Montserrat', sans-serif;
@@ -381,7 +390,14 @@ button:hover {
     border-radius: 45px;
     outline:0 none !important;
 }
-
+button:focus-visible {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+}
 
 .second_button{
   border-radius: 45px;
@@ -420,7 +436,14 @@ button:hover {
 }
 
 
-
+.second_button:focus-visible {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+}
 .third_button {
   border-radius: 45px;
   background-color: #ffffff;
@@ -455,6 +478,14 @@ button:hover {
   border-radius: 45px;
   outline:0 none !important;
 
+}
+.third_button:focus-visible {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
 }
 
 .fourth_button {
@@ -492,6 +523,15 @@ button:hover {
   outline:0 none !important;
 
 }
+.fourth_button:focus-visible {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+}
+
 
 .positionButtons{
   bottom: 15%;
