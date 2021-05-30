@@ -67,7 +67,7 @@
   text-align: center;
   transition: all 0.5s;
   margin: 5px;
-  font-weight: lighter;
+  font-weight: bolder;
   
 }
 table {
@@ -82,7 +82,7 @@ table {
   }
   caption {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
     border-radius: 10px;
     border-spacing: 3px;
     background: #BCEDDD;
@@ -209,8 +209,17 @@ table {
  margin: auto;
  border-radius: 30px;
  font-family: 'Montserrat', sans-serif;
- font-weight: lighter;
+ font-weight: bolder;
  
+}
+.Questions:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+
 }
 .Answers{
   top: 2%;
@@ -222,45 +231,65 @@ table {
   margin: auto;
   border-radius: 30px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
+  font-weight: bolder;
 }
+.Answers:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+
+}
+
 .but_res{
   border-radius: 45px;
   background-color: #ffffff;
   border: none;
   color: #080808;
 
-  padding: 10px;
   width: 70%;
   font-family: 'Montserrat', sans-serif;
   font-size: 80%;
   text-align: center;
   transition: all 0.5s;
-  font-weight: lighter;
+  font-weight: bolder;
   cursor:pointer
+}
+.but_res:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+
 }
 
 .Topics{
   text-decoration: none;
   display: inline-block;
-  width:63%;
+  position: auto;
+  left:50%;
+  right: 50%;
+  width: 63%;
   height: auto;
-  margin: auto;
+  margin: 0.5%;
   line-height: 250%;
   border-radius: 45px;
-  margin: 0.5%;
-  font-size: 170%;
-  text-align: center;
+  font-size: 150%;
+  align-items: center;
   background: white;
+  color: #080808;
   box-shadow: 0 8px 15px rgba(0, 0, 0, .5);
-  transition: .3s;
-  font-weight: lighter;
-  padding:1.5%;
+  transition: all 0.5s;
+  font-weight: bolder;
+  padding: 1.5%;
   font-family: 'Montserrat', sans-serif;
   border: none;
 
 }
-
 
 .Topics:hover{
   background: #2EE59D;
@@ -276,19 +305,27 @@ table {
 .input_top{
   opacity: 0;
 }
+.Topics:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
 
+}
 .Topics_div{
-  top: 5%;
+  top: 1.5%;
   font-size: auto;
   width: auto;
   margin: auto;
   right: 2%;
   left: 2%;
-  top:1.5%;
+  color: #080808;
   font-family: 'Montserrat', sans-serif;
   bottom: 40%;
-  position:absolute;
-  font-weight: lighter;
+  position:fixed;
+  font-weight: bolder;
 }
 
 
@@ -301,6 +338,8 @@ table {
   background-color: #5cb58a;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  font-weight: bolder;
+  line-height: 0.7;
 }
 
 
@@ -312,6 +351,7 @@ table {
   vertical-align:top;
   text-align:center;
   display:inline-block;
+  font-weight: bolder;
 }
 
 button{
@@ -332,7 +372,6 @@ button{
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
   transition: .3s;
   outline:0 none !important;
-
 }
 
 button:hover {
@@ -344,33 +383,6 @@ button:hover {
     outline:0 none !important;
 }
 
-.first_button{
-  font-weight: lighter;
-  border-radius: 45px;
-  background-color: #ffffff;
-  border: none;
-  color: #080808;
-  text-align: center;
-  font-size: 14px;
-  width: 200px;
-  height: auto;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-
-}
-
-.first_button:hover {
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
-}
 
 .second_button{
   border-radius: 45px;
@@ -383,14 +395,22 @@ button:hover {
   width: 200px;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  font-weight: lighter;
+  font-weight: bolder;
   text-align: center;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
 
 }
+.second_button:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
 
+}
 .second_button:hover {
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
@@ -400,6 +420,8 @@ button:hover {
   outline:0 none !important;
 }
 
+
+
 .third_button {
   border-radius: 45px;
   background-color: #ffffff;
@@ -407,10 +429,11 @@ button:hover {
   color: #080808;
   text-align: center;
   font-size: 14px;
+  font-weight: bolder;
   width: 200px;
   height: auto;
   font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
+  font-weight: bolder;
   text-align: center;
   transition: all 0.5s;
   cursor: pointer;
@@ -425,6 +448,15 @@ button:hover {
     border-radius: 45px;
     outline:0 none !important;
 }
+.third_button:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+
+}
 
 .fourth_button {
   border-radius: 45px;
@@ -433,6 +465,7 @@ button:hover {
   color: #080808;
   text-align: center;
   font-size: 20px;
+  font-weight: bolder;
   height: auto;
   width: 200px;
   font-family: 'Montserrat', sans-serif;
@@ -440,7 +473,7 @@ button:hover {
   text-align: center;
   cursor: pointer;
   margin: 5px;
-  font-weight: lighter;
+  font-weight: bolder;
 }
 
 .fourth_button::hover {
@@ -450,6 +483,15 @@ button:hover {
   transform: translateY(-9px);
   border-radius: 45px;
   outline:0 none !important;
+}
+.fourth_button:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+
 }
 
 .positionButtons{
@@ -471,4 +513,85 @@ button:hover {
 }
 .Text_{
   font-size:30em;
+}
+
+@media(max-width:635px) {
+  .Topics {
+    font-size: 63%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: auto;
+    font-weight: bolder;
+
+  }
+  .Topics_div{
+    top: 1.5%;
+    margin: auto;
+    right: 13%;
+    font-family: 'Montserrat', sans-serif;
+    position:fixed;
+    text-align: center;
+    font-weight: bolder;
+
+    
+  }
+  .Questions {
+    height: auto;
+    text-align: center;
+    font-size:160%;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    font-weight: bolder;
+  }
+  .Answers {  
+    top: 1%;
+    width: 96%;
+    font-size: 55%;
+    font-weight: bolder;
+  }
+  .Result {
+    font-size: 130%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    line-height: 0.5;
+    font-weight: bolder;
+  }
+  .but_res {
+    height: 0.2%;
+    width: 90%;
+    font-size: 110%;
+    font-weight: bolder;
+    padding-top: 0%;  
+    text-align:unset;
+    transition: all 0.5s;
+  }
+  .third_button {
+    border-color: rgb(30, 107, 195);
+    border-style: solid;
+    width: 47%;
+    font-size: 9px;
+    margin: -15px;
+    line-height: 3;
+    position:fixed;
+    bottom: 140px;
+    left: 20px;
+    }
+    .fourth_button {
+    border-color: rgb(30, 107, 195);
+    border-style: solid;
+    font-size: 9px;
+    width: 47%;
+    bottom: 60%;
+    margin: -15px;
+    line-height: 3;
+    position:fixed;
+    bottom: 140px;
+    right: 20px;
+    }
+    .position{
+      top: 30%;
+      left :33%;
+    }
 }
