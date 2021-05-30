@@ -330,7 +330,7 @@ export class App extends React.Component {
         <p><button onClick={() => this.assistant_param(3, "answer")} className = "but_res">3: {this.state.questions[this.state.rand].answer3}</button></p>
         <p><button onClick={() => this.assistant_param(4, "answer")} className = "but_res">4: {this.state.questions[this.state.rand].answer4}</button></p>
         <div className="Result">
-          <ul>Ваш Ответ: {this.state.answer}</ul>
+          <ul>Ответ: {this.state.answer}</ul>
           <ul> Результат: {this.state.result} </ul> 
         </div>
       </div>
@@ -352,7 +352,7 @@ export class App extends React.Component {
             <tr>
               <th className="text_rez">Тема</th>
               <th className="text_rez">Задание</th>
-              <th className="text_rez">Ваш ответ</th>
+              <th className="text_rez">Ответ</th>
               <th className="text_rez">Верный ответ</th>
               <th className="text_rez">Вердикт</th>
             </tr>
