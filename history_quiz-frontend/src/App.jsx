@@ -194,9 +194,11 @@ export class App extends React.Component {
   Сompare(){
     if(this.state.answer===this.state.questions[this.state.rand].true_answer) {
       this.setState({result:"Верно"}, ()=>{this.Result();});
+      this.assistant_param(1, "answer_check");
     }   
     else {
-      this.setState({result:"Неверно"}, ()=>{this.Result()})
+      this.setState({result:"Неверно"}, ()=>{this.Result()});
+      this.assistant_param(0, "answer_check");
     };
   }
   Result(){
@@ -359,8 +361,8 @@ export class App extends React.Component {
         <div className="Questions"> {this.state.questions[this.state.rand].task}</div>
           <div className="button_res"><p><input  className= "Hieght"ref = {this.myRef1} type = "button" value = {1 + '. ' + this.state.questions[this.state.rand].answer1} onClick={() => this.assistant_param(1, "answer")} className = "but_res"/></p>
           <p><input ref = {this.myRef2} type = "button" value = {2 + '. ' + this.state.questions[this.state.rand].answer2} onClick={() => this.assistant_param(2, "answer")} className = "but_res"/></p>
-          <p><input ref = {this.myRef3} type = "button" value = {3 + '. ' + this.state.questions[this.state.rand].answer2} onClick={() => this.assistant_param(3, "answer")} className = "but_res"/></p>
-          <p><input ref = {this.myRef4} type = "button" value = {4 + '. ' + this.state.questions[this.state.rand].answer2} onClick={() => this.assistant_param(4, "answer")} className = "but_res"/></p>
+          <p><input ref = {this.myRef3} type = "button" value = {3 + '. ' + this.state.questions[this.state.rand].answer3} onClick={() => this.assistant_param(3, "answer")} className = "but_res"/></p>
+          <p><input ref = {this.myRef4} type = "button" value = {4 + '. ' + this.state.questions[this.state.rand].answer4} onClick={() => this.assistant_param(4, "answer")} className = "but_res"/></p>
            <div className="Result">
           <ul>Ответ: {this.state.answer}</ul>
           <ul> Результат: {this.state.result} </ul> 
