@@ -38,11 +38,18 @@ export class App extends React.Component {
       rand: 0,
 
     }    
-    //this.myRef = React.createRef();
+    this.myRef1 = React.createRef();
+    this.myRef2 = React.createRef();
+    this.myRef3 = React.createRef();
+    this.myRef4 = React.createRef();
     this.Number_Answers = this.Number_Answers.bind(this);
     this.ChooseTopic = this.ChooseTopic.bind(this);
     this.NewQuestion = this.NewQuestion.bind(this);
     this.Compare = this.Сompare.bind(this);
+    this.focus_1st_q = this.focus_1st_q.bind(this);
+    this.focus_2st_q = this.focus_2st_q.bind(this);
+    this.focus_3st_q = this.focus_3st_q.bind(this);
+    this.focus_4st_q = this.focus_4st_q.bind(this);
     //Timeout = setTimeout(()=> this.assistant_global_event("next_question"), 3000);
 
     this.assistant = initializeAssistant(() => this.getStateForAssistant() );
@@ -56,9 +63,18 @@ export class App extends React.Component {
     });
   }
 
-  //focus_1st_q() {
-  //  this.myRef.current.focus();
-  //}
+  focus_1st_q() {
+    this.myRef1.current.blur();
+  }
+  focus_2st_q() {
+    this.myRef2.current.blur();
+  }
+  focus_3st_q() {
+    this.myRef3.current.blur();
+  }
+  focus_4st_q() {
+    this.myRef4.current.blur();
+  }
   
   focusTextInput = () => {
     // Focus the text input using the raw DOM API
@@ -290,6 +306,22 @@ export class App extends React.Component {
     }
     else{
       this.Number_Answers(n);
+      switch(n){
+        case 1:
+          this.focus_1st_q();
+          break;
+        case 2:
+          this.focus_2st_q();
+          break;
+        case 3:
+          this.focus_3st_q();
+          break;
+        case 4:
+          this.focus_4st_q();
+          break;
+        default:
+          break;
+      }
     }
   }
 
@@ -300,8 +332,9 @@ export class App extends React.Component {
       <div>
         <div className='Text'>
         </div >
-      </div>
-      <ul className="positionButtons"> <p><button onClick={() =>/* this.WriteResults()*/ this.assistant_global_event("show_res")} className ="fourth_button">Результаты</button></p></ul>
+      </div>     
+       <ul className="positionButtons"> <p><button onClick={() =>this.assistant.close()} className ="third_button">Выход</button></p>
+       <p><button onClick={() =>/* this.WriteResults()*/ this.assistant_global_event("show_res")} className ="fourth_button">Результаты</button></p></ul>
     </div>)
   }
   ShowTopics() {
@@ -315,7 +348,7 @@ export class App extends React.Component {
   }
 
   DeleteResults() {
-    this.setState({show_results: []});
+    this.setState({show_results: []})
   }
   
   WriteQuestions(){
@@ -324,14 +357,14 @@ export class App extends React.Component {
     <div className="App">
  <div className="Answers">
         <div className="Questions"> {this.state.questions[this.state.rand].task}</div>
-        <p><button onClick={() => this.assistant_param(1, "answer") /*this.focusTextInput()*/} className = "but_res">1: {this.state.questions[this.state.rand].answer1}</button></p>
-        
-        <p><button onClick={() => this.assistant_param(2, "answer")} className = "but_res">2: {this.state.questions[this.state.rand].answer2}</button></p>
-        <p><button onClick={() => this.assistant_param(3, "answer")} className = "but_res">3: {this.state.questions[this.state.rand].answer3}</button></p>
-        <p><button onClick={() => this.assistant_param(4, "answer")} className = "but_res">4: {this.state.questions[this.state.rand].answer4}</button></p>
-        <div className="Result">
+          <div className="button_res"><p><input  className= "Hieght"ref = {this.myRef1} type = "button" value = {1 + '. ' + this.state.questions[this.state.rand].answer1} onClick={() => this.assistant_param(1, "answer")} className = "but_res"/></p>
+          <p><input ref = {this.myRef2} type = "button" value = {2 + '. ' + this.state.questions[this.state.rand].answer2} onClick={() => this.assistant_param(2, "answer")} className = "but_res"/></p>
+          <p><input ref = {this.myRef3} type = "button" value = {3 + '. ' + this.state.questions[this.state.rand].answer2} onClick={() => this.assistant_param(3, "answer")} className = "but_res"/></p>
+          <p><input ref = {this.myRef4} type = "button" value = {4 + '. ' + this.state.questions[this.state.rand].answer2} onClick={() => this.assistant_param(4, "answer")} className = "but_res"/></p>
+           <div className="Result">
           <ul>Ответ: {this.state.answer}</ul>
           <ul> Результат: {this.state.result} </ul> 
+          </div>
         </div>
       </div>
 
@@ -368,7 +401,7 @@ export class App extends React.Component {
         </div>
       </div>
       <ul className="positionButtons"><p><button onClick={() => this.assistant_global_event("list_theme")} className ="third_button"><span>Список тем</span></button></p>
-      <p><button onClick={() => this.assistant_global_event("del_res")} className ="fourth_button">Сброс результатов</button></p></ul>
+      <p><button onClick={() => this.assistant_global_event("del_res")} className ="fourth_button">Сброс</button></p></ul>
     </div>)
   }
   WriteLoading(){

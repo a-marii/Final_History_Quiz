@@ -212,7 +212,7 @@ table {
  font-weight: bolder;
  
 }
-.Questions:focus-visible{
+.Questions:focus{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -221,6 +221,21 @@ table {
   outline:0 none !important;
 
 }
+.poss{
+   padding-top: auto;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  vertical-align:middle;
+}
+.possition_answer{
+   position:absolute;
+   top:30%;
+   width: 100%;
+   height: 100%;
+
+}
+
 .Answers{
   top: 2%;
   position:sticky;
@@ -233,7 +248,7 @@ table {
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
 }
-.Answers:focus-visible{
+.Answers:focus{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -254,9 +269,11 @@ table {
   text-align: center;
   transition: all 0.5s;
   font-weight: bolder;
-  cursor:pointer
+  cursor:pointer;
+  font-size: 25px;
+  padding: 1%;
 }
-.but_res:focus-visible{
+.but_res:focus{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -265,7 +282,21 @@ table {
   outline:0 none !important;
 
 }
-
+.position_input{
+  top:30%;
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  color: #080808;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80%;
+  text-align: center;
+  transition: all 0.5s;
+  font-weight: bolder;
+  cursor:pointer;
+  background-color: black;
+}
 .Topics{
   text-decoration: none;
   display: inline-block;
@@ -287,24 +318,15 @@ table {
   padding: 1.5%;
   font-family: 'Montserrat', sans-serif;
   border: none;
-
+  cursor: pointer;
 }
 
-.Topics:hover{
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
-    cursor:pointer
 
-}
 
 .input_top{
   opacity: 0;
 }
-.Topics:focus-visible{
+.Topics:focus{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -327,16 +349,7 @@ table {
   font-weight: bolder;
 }
 
-.Topics:focus-visible{
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
-    cursor:pointer
 
-}
 .Result{
   left: 43%;
   font-family: 'Montserrat', sans-serif;
@@ -362,7 +375,7 @@ table {
   font-weight: bolder;
 }
 
-button{
+.button_input{
   text-decoration: none;
   display: inline-block;
   width: 500px;
@@ -380,24 +393,11 @@ button{
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
   transition: .3s;
   outline:0 none !important;
+  top:30%;
+
 }
 
-button:hover {
-    background: #2EE59D;
-    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-    color: white;
-    transform: translateY(-9px);
-    border-radius: 45px;
-    outline:0 none !important;
-}
-button:focus-visible {
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
-}
+
 
 .second_button{
   border-radius: 45px;
@@ -417,7 +417,7 @@ button:focus-visible {
   margin: 5px;
 
 }
-.second_button:focus-visible{
+.second_button:focus{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -426,31 +426,16 @@ button:focus-visible {
   outline:0 none !important;
 
 }
-.second_button:hover {
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
-}
 
 
-.second_button:focus-visible {
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
-}
+
 .third_button {
   border-radius: 45px;
   background-color: #ffffff;
   border: none;
   color: #080808;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bolder;
   width: 200px;
   height: auto;
@@ -460,17 +445,12 @@ button:focus-visible {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  height: 3%;
+  padding: 5%;
 }
 
-.third_button:hover {
-    background: #2EE59D;
-    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-    color: white;
-    transform: translateY(-9px);
-    border-radius: 45px;
-    outline:0 none !important;
-}
-.third_button:focus-visible{
+
+.third_button:focus{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -478,17 +458,11 @@ button:focus-visible {
   border-radius: 45px;
   outline:0 none !important;
 
-}
-.third_button:focus-visible {
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
 }
 
 .fourth_button {
+
+
   border-radius: 45px;
   background-color: #ffffff;
   border: none;
@@ -496,25 +470,20 @@ button:focus-visible {
   text-align: center;
   font-size: 20px;
   font-weight: bolder;
-  height: auto;
   width: 200px;
+  height: auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-weight: bolder;
   text-align: center;
+  transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  font-weight: bolder;
+  height: 3%;
+  padding: 5%;
 }
 
-.fourth_button::hover {
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
-}
-.fourth_button:focus-visible{
+
+.fourth_button:focus{
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
@@ -523,15 +492,6 @@ button:focus-visible {
   outline:0 none !important;
 
 }
-.fourth_button:focus-visible {
-  background: #2EE59D;
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
-  transform: translateY(-9px);
-  border-radius: 45px;
-  outline:0 none !important;
-}
-
 
 .positionButtons{
   bottom: 15%;
@@ -600,34 +560,49 @@ button:focus-visible {
   .but_res {
     height: 0.2%;
     width: 90%;
-    font-size: 110%;
+    font-size: 120%;
     font-weight: bolder;
     padding-top: 0%;  
     text-align:unset;
     transition: all 0.5s;
+    padding: 11px;
   }
   .third_button {
     border-color: rgb(30, 107, 195);
     border-style: solid;
     width: 47%;
-    font-size: 9px;
+    font-size: 13px;
     margin: -15px;
-    line-height: 3;
+    line-height: 0;
     position:fixed;
     bottom: 140px;
     left: 20px;
+    height: auto;
     }
     .fourth_button {
     border-color: rgb(30, 107, 195);
     border-style: solid;
-    font-size: 9px;
+    font-size: 13px;
     width: 47%;
     bottom: 60%;
     margin: -15px;
-    line-height: 3;
+    line-height: 0;
     position:fixed;
     bottom: 140px;
     right: 20px;
+
+    }
+    .second_button {
+      border-color: rgb(30, 107, 195);
+      border-style: solid;
+      font-size: 9px;
+      width: 47%;
+      margin: -15px;
+      line-height: 3;
+      position:fixed;
+      top: 550px;
+      right: 20px;
+      text-align: center;
     }
     .position{
       top: 30%;
