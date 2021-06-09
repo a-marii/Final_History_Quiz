@@ -351,7 +351,7 @@ table {
 
 
 .Result{
-  left: 43%;
+  left: 40%;
   font-family: 'Montserrat', sans-serif;
   font-size: 100%;
   padding-bottom: 3px;
@@ -492,6 +492,69 @@ table {
   outline:0 none !important;
 
 }
+.third_button1 {
+  border-radius: 45px;
+  background-color: #ffffff;
+  border: none;
+  color: #080808;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  width: 200px;
+  height: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  height: 3%;
+  padding: 5%;
+}
+
+
+.third_button1:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+
+}
+
+.fourth_button1 {
+
+
+  border-radius: 45px;
+  background-color: #ffffff;
+  border: none;
+  color: #080808;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  width: 200px;
+  height: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  height: 3%;
+  padding: 5%;
+}
+
+
+.fourth_button1:focus{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-9px);
+  border-radius: 45px;
+  outline:0 none !important;
+
+}
 
 .positionButtons{
   bottom: 15%;
@@ -538,25 +601,29 @@ table {
   .Questions {
     height: auto;
     text-align: center;
-    font-size:160%;
+    font-size:140%;
     padding-right: 2%;
     padding-left: 2%;
     padding-bottom: 2%;
     font-weight: bolder;
   }
   .Answers {  
-    top: 1%;
+    top: 5%;
     width: 96%;
     font-size: 55%;
     font-weight: bolder;
   }
   .Result {
+    left:40%;
     font-size: 130%;
     padding-top: 1px;
     padding-bottom: 1px;
     line-height: 0.5;
     font-weight: bolder;
+    padding-right:30px;
+
   }
+
   .but_res {
     height: 0.2%;
     width: 90%;
@@ -565,7 +632,8 @@ table {
     padding-top: 0%;  
     text-align:unset;
     transition: all 0.5s;
-    padding: 10px;
+    padding: 8px;
+    -webkit-appearance: none;
   }
   .third_button {
     border-color: rgb(30, 107, 195);
@@ -578,6 +646,7 @@ table {
     bottom: 140px;
     left: 20px;
     height: auto;
+    -webkit-appearance: none;
     }
     .fourth_button {
     border-color: rgb(30, 107, 195);
@@ -590,8 +659,36 @@ table {
     position:fixed;
     bottom: 140px;
     right: 20px;
+    -webkit-appearance: none;
 
     }
+    .third_button1 {
+      border-color: rgb(30, 107, 195);
+      border-style: solid;
+      width: 47%;
+      font-size: 13px;
+      margin: -15px;
+      line-height: 0;
+      position:fixed;
+      top:300%;
+      left: 20px;
+      height: auto;
+      -webkit-appearance: none;
+      }
+      .fourth_button1 {
+      border-color: rgb(30, 107, 195);
+      border-style: solid;
+      font-size: 13px;
+      width: 47%;
+      bottom: 60%;
+      margin: -15px;
+      line-height: 0;
+      position:fixed;
+      top:300%;
+      right: 20px;
+      -webkit-appearance: none;
+  
+      }
     .second_button {
       border-color: rgb(30, 107, 195);
       border-style: solid;
@@ -603,6 +700,7 @@ table {
       top: 550px;
       right: 20px;
       text-align: center;
+      -webkit-appearance: none;
     }
     .position{
       top: 30%;
