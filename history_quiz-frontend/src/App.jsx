@@ -238,8 +238,9 @@ export class App extends React.Component {
     console.log("NewQuestion()");
     const min=this.state.topic.start;
     const max=this.state.topic.finish;   
-    const random=this.getRandomArbitrary(min, max);
+    let random=this.getRandomArbitrary(min, max);
     while(random===this.state.rand){
+      console.log("the same");
       random=this.getRandomArbitrary(min, max);
     }
     this.setState({
